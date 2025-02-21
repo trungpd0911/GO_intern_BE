@@ -3,6 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ScoreModule } from './score/score.module';
 import { SeedModule } from './seed/seed.module';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -20,7 +21,7 @@ import { SeedModule } from './seed/seed.module';
     ScoreModule,
     SeedModule,
   ],
-  controllers: [],
+  controllers: [AppController],
   providers: [],
 })
 export class AppModule {}
