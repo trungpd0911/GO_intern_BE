@@ -29,15 +29,6 @@ export class ScoreService {
             },
             {
                 $limit: limit
-            },
-            {
-                $project: {
-                    studentId: 1,
-                    math: 1,
-                    physics: 1,
-                    chemistry: 1,
-                    totalScore: 1
-                }
             }
         ]).exec();
 
